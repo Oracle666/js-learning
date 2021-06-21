@@ -1,21 +1,14 @@
 const workers = [
     {name:"John",salary:500},
     {name:"Mike",salary:1300},
-    {name:"Linda",salary:1500}];
+    {name:"Linda",salary:1500},
+    {name:"Inda",salary:1800}];
 
-const getWorthyWorkers = massivfilter =>{
-    const finalmassiv = [];
+const Massiv = workers.filter(e =>{
+    return e.salary > 1000;
+})
+const finalArray = Massiv.map(function(e){
+    return  e.name;
+})
 
-    for(let i = 0; i<massivfilter.length; i++){
-        const a = massivfilter[i]
-        if(a.salary > 1000){
-            finalmassiv.push(a.name);
-        }
-    }
-
-    return finalmassiv;
-}
-
-
-console.log(getWorthyWorkers(workers));
-
+console.log(finalArray);
